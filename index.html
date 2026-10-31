@@ -1,1 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Premium handyman services for plumbing, electrical, carpentry, and general repairs."
+    />
+    <title>HandyPro | Trusted Home Services</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="container">
+        <div class="topbar__inner">
+          <div class="topbar__info">
+            <span class="topbar__meta">📍 245 Harbor Avenue</span>
+            <span class="topbar__meta">⏰ Mon–Sat: 8:00 AM – 7:00 PM</span>
+          </div>
+          <nav class="topbar__nav" aria-label="Utility navigation">
+            <a href="#contact" class="topbar__link">Emergency Repair</a>
+            <a href="#about" class="topbar__link">FAQs</a>
+            <a href="#contact" class="topbar__link">Contact</a>
+          </nav>
+        </div>
+      </div>
+    </div>
 
+    <header class="site-header">
+      <div class="container">
+        <div class="header__inner">
+          <a href="#home" class="brand" aria-label="HandyPro home">
+            <span class="brand__mark" aria-hidden="true"></span>
+            <span class="brand__text">
+              <span class="brand__title">HandyPro</span>
+              <span class="brand__subtitle">Home Services</span>
+            </span>
+          </a>
+
+          <nav class="nav" aria-label="Main navigation">
+            <ul class="nav__list">
+              <li><a href="#home" class="nav__link">Home</a></li>
+              <li><a href="#about" class="nav__link">About</a></li>
+              <li><a href="#services" class="nav__link">Services</a></li>
+              <li><a href="#contact" class="nav__link">Contact</a></li>
+            </ul>
+          </nav>
+
+          <div class="header__actions">
+            <div class="header__call" aria-label="Call us">
+              <span class="header__call-icon" aria-hidden="true">☎</span>
+              <span class="header__call-text">
+                <span class="header__call-label">Call Us</span>
+                <span class="header__call-number">+1 (800) 123-4567</span>
+              </span>
+            </div>
+            <a href="#contact" class="btn btn--secondary">Book a Service</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero" aria-label="Hero section">
+        <div class="container hero__content">
+          <div class="hero__grid">
+            <div class="hero__copy">
+              <span class="hero__badge">Trusted local professionals</span>
+              <h1 class="hero__title">Fast, reliable home fixes done right.</h1>
+              <p class="hero__description">
+                From urgent repairs to complete home upgrades, our licensed craftsmen
+                deliver quality workmanship, honest pricing, and dependable service you can count on.
+              </p>
+
+              <div class="hero__actions">
+                <a href="#contact" class="btn btn--primary">Get a Free Quote</a>
+                <a href="#services" class="btn btn--ghost">View Our Work</a>
+              </div>
+
+              <div class="hero__stats" aria-label="Key business statistics">
+                <div class="hero__stat">
+                  <span class="hero__stat-number">12k+</span>
+                  <span class="hero__stat-label">Projects completed</span>
+                </div>
+                <div class="hero__stat">
+                  <span class="hero__stat-number">4.9/5</span>
+                  <span class="hero__stat-label">Customer rating</span>
+                </div>
+                <div class="hero__stat">
+                  <span class="hero__stat-number">24/7</span>
+                  <span class="hero__stat-label">Emergency support</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero__panel">
+              <div class="booking-card">
+                <div class="booking-card__header">
+                  <h2 class="booking-card__title">Book Service</h2>
+                  <span class="booking-card__badge">Available</span>
+                </div>
+
+                <form class="booking-card__form">
+                  <div class="input-group">
+                    <label for="name" class="input-group__label">Full Name</label>
+                    <input id="name" class="input-group__field" type="text" placeholder="Your name" />
+                  </div>
+
+                  <div class="input-group">
+                    <label for="service" class="input-group__label">Service</label>
+                    <select id="service" class="input-group__field">
+                      <option>Plumbing</option>
+                      <option>Electrical</option>
+                      <option>Carpentry</option>
+                      <option>General Repairs</option>
+                    </select>
+                  </div>
+
+                  <div class="input-group">
+                    <label for="date" class="input-group__label">Preferred Date</label>
+                    <input id="date" class="input-group__field" type="date" />
+                  </div>
+
+                  <button type="submit" class="btn btn--primary">Request Appointment</button>
+                </form>
+
+                <div class="booking-card__summary">
+                  <span class="booking-card__summary-label">Starting From</span>
+                  <span class="booking-card__summary-price">$89</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="section" aria-labelledby="services-title">
+        <div class="container">
+          <div class="section__header section__header--left">
+            <span class="eyebrow">Our Services</span>
+            <h2 id="services-title" class="section__title">Precision work for every room and repair.</h2>
+          </div>
+
+          <div class="service-grid">
+            <article class="service-card">
+              <div class="service-card__icon" aria-hidden="true">🔧</div>
+              <h3 class="service-card__title">Plumbing</h3>
+              <p class="service-card__text">
+                Leak detection, pipe replacement, fixture installation, and complete kitchen or bathroom plumbing support.
+              </p>
+              <span class="service-card__meta">Learn more</span>
+            </article>
+
+            <article class="service-card">
+              <div class="service-card__icon" aria-hidden="true">⚡</div>
+              <h3 class="service-card__title">Electrical</h3>
+              <p class="service-card__text">
+                Safe rewiring, lighting upgrades, outlet repair, panel checks, and energy-efficient electrical solutions.
+              </p>
+              <span class="service-card__meta">Learn more</span>
+            </article>
+
+            <article class="service-card">
+              <div class="service-card__icon" aria-hidden="true">🪵</div>
+              <h3 class="service-card__title">Carpentry</h3>
+              <p class="service-card__text">
+                Custom woodwork, shelving, trim installation, cabinet fixes, and structural improvements with expert craftsmanship.
+              </p>
+              <span class="service-card__meta">Learn more</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section about" aria-labelledby="about-title">
+        <div class="container about__grid">
+          <div class="about__image" role="img" aria-label="Handyman working on a renovation project"></div>
+
+          <div class="about__content">
+            <div>
+              <span class="eyebrow">About HandyPro</span>
+              <h2 id="about-title" class="section__title">Professional craftsmanship with a personal touch.</h2>
+            </div>
+
+            <p class="about__lead">
+              We combine skilled trade expertise with transparent communication so every home improvement project feels simple, stress-free, and reliable.
+            </p>
+
+            <div class="feature-list">
+              <div class="feature-list__item">
+                <span class="feature-list__icon" aria-hidden="true">🛠️</span>
+                <div>
+                  <h3 class="feature-list__title">Licensed &amp; Insured</h3>
+                  <p class="feature-list__text">Trusted professionals who meet strict safety and quality standards.</p>
+                </div>
+              </div>
+
+              <div class="feature-list__item">
+                <span class="feature-list__icon" aria-hidden="true">💬</span>
+                <div>
+                  <h3 class="feature-list__title">Clear Communication</h3>
+                  <p class="feature-list__text">Honest updates, transparent pricing, and no surprise costs.</p>
+                </div>
+              </div>
+
+              <div class="feature-list__item">
+                <span class="feature-list__icon" aria-hidden="true">⏱️</span>
+                <div>
+                  <h3 class="feature-list__title">Fast Scheduling</h3>
+                  <p class="feature-list__text">We work around your routine and arrive ready to solve the issue.</p>
+                </div>
+              </div>
+
+              <div class="feature-list__item">
+                <span class="feature-list__icon" aria-hidden="true">🏅</span>
+                <div>
+                  <h3 class="feature-list__title">Premium Results</h3>
+                  <p class="feature-list__text">Meticulous workmanship that protects your home and improves daily life.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section cta" aria-labelledby="cta-title">
+        <div class="container">
+          <div class="cta__content">
+            <div>
+              <h2 id="cta-title" class="cta__title">Ready to fix what’s broken or upgrade your space?</h2>
+              <p class="cta__text">Get a free estimate from our trusted local team today.</p>
+            </div>
+            <a href="tel:+18001234567" class="btn btn--primary">Book a Free Estimate</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__grid">
+          <div>
+            <div class="footer__brand">
+              <a href="#home" class="brand" aria-label="HandyPro home">
+                <span class="brand__mark" aria-hidden="true"></span>
+                <span class="brand__text">
+                  <span class="brand__title">HandyPro</span>
+                  <span class="brand__subtitle">Home Services</span>
+                </span>
+              </a>
+            </div>
+            <p class="footer__text">
+              Premium home repair and maintenance solutions designed to make life easier, safer, and more comfortable for homeowners.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="footer__title">Quick Links</h3>
+            <ul class="footer__list">
+              <li><a href="#about" class="footer__link">About Us</a></li>
+              <li><a href="#services" class="footer__link">Services</a></li>
+              <li><a href="#contact" class="footer__link">Pricing</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer__title">Services</h3>
+            <ul class="footer__list">
+              <li><a href="#services" class="footer__link">Plumbing</a></li>
+              <li><a href="#services" class="footer__link">Electrical</a></li>
+              <li><a href="#services" class="footer__link">Carpentry</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer__title">Contact</h3>
+            <div class="footer__contact">
+              <div class="footer__contact-item"><span class="footer__contact-icon" aria-hidden="true">📍</span><span>245 Harbor Avenue</span></div>
+              <div class="footer__contact-item"><span class="footer__contact-icon" aria-hidden="true">☎</span><span>+1 (800) 123-4567</span></div>
+              <div class="footer__contact-item"><span class="footer__contact-icon" aria-hidden="true">✉</span><span>hello@handypro.com</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <span>© 2026 HandyPro. All rights reserved.</span>
+          <div class="footer__social" aria-label="Social media links">
+            <a href="#" class="footer__social-link" aria-label="Facebook">f</a>
+            <a href="#" class="footer__social-link" aria-label="Instagram">◎</a>
+            <a href="#" class="footer__social-link" aria-label="LinkedIn">in</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>

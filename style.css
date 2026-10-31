@@ -222,6 +222,46 @@ address {
   border: 1px solid rgba(12, 30, 53, 0.15);
 }
 
+.topbar {
+  background: var(--color-secondary);
+  color: rgba(255, 255, 255, 0.75);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.topbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 4.2rem;
+  gap: 1.6rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.topbar__info,
+.topbar__nav {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.topbar__meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.topbar__link {
+  color: rgba(255, 255, 255, 0.8);
+  transition: color var(--transition-fast);
+}
+
+.topbar__link:hover,
+.topbar__link:focus-visible {
+  color: var(--color-white);
+}
+
 .site-header {
   position: sticky;
   top: 0;

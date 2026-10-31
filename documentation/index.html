@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HandyPro Theme Documentation</title>
+    <style>
+      :root {
+        --bg: #f5f7fb;
+        --surface: #ffffff;
+        --surface-soft: #edf2f9;
+        --text: #1c2a39;
+        --muted: #66758a;
+        --primary: #f75d1c;
+        --primary-dark: #d94a10;
+        --secondary: #0c1e35;
+        --border: #e4eaf2;
+        --shadow: 0 12px 30px rgba(12, 30, 53, 0.08);
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.7;
+      }
+      a { color: var(--primary); text-decoration: none; }
+      code, pre {
+        font-family: "Consolas", "Monaco", monospace;
+      }
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+      .top {
+        background: var(--secondary);
+        color: #fff;
+        padding: 24px 0;
+      }
+      .top h1 {
+        margin: 0;
+        font-size: clamp(2rem, 4vw, 3rem);
+        line-height: 1.2;
+      }
+      .badge {
+        display: inline-block;
+        margin-bottom: 12px;
+        background: rgba(255,255,255,0.08);
+        border: 1px solid rgba(255,255,255,0.12);
+        color: #e9eef8;
+        padding: 8px 14px;
+        border-radius: 999px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-size: 11px;
+        font-weight: 700;
+      }
+      .section {
+        padding: 48px 0;
+      }
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        box-shadow: var(--shadow);
+        padding: 28px;
+      }
+      h2 {
+        margin-top: 0;
+        margin-bottom: 16px;
+        font-size: clamp(1.6rem, 3vw, 2.2rem);
+      }
+      h3 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+        color: var(--secondary);
+      }
+      p, li {
+        color: var(--muted);
+      }
+      pre {
+        background: #0f172a;
+        color: #e2e8f0;
+        padding: 18px 20px;
+        border-radius: 12px;
+        overflow-x: auto;
+        font-size: 0.92rem;
+      }
+      .note {
+        background: var(--surface-soft);
+        border-left: 4px solid var(--primary);
+        padding: 16px 18px;
+        border-radius: 10px;
+        margin-top: 18px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 24px;
+      }
+      .mini {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 20px;
+      }
+      .mini strong {
+        display: block;
+        margin-bottom: 8px;
+        color: var(--secondary);
+      }
+      ul {
+        padding-left: 18px;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="top">
+      <div class="container">
+        <div class="badge">Theme Documentation</div>
+        <h1>HandyPro – Buyer Customization Guide</h1>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="section">
+        <div class="card">
+          <h2>Overview</h2>
+          <p>
+            This template is built with a clean static HTML/CSS structure. Most edits are done in
+            <strong>index.html</strong> and <strong>style.css</strong>. Use this guide to quickly replace
+            the logo, adjust the color palette, and update the business phone numbers.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="card">
+          <h2>1) Change the company logo</h2>
+
+          <p>
+            The header logo is typically located in the top navigation area of <strong>index.html</strong>.
+            If your theme uses a CSS-generated logo block, replace it with your own image or branded text.
+          </p>
+
+          <pre><code>&lt;!-- Open index.html and edit the brand area --&gt;
+&lt;a href="#home" class="brand" aria-label="Your Company home"&gt;
+  &lt;img src="assets/logo.png" alt="Your Company Logo" width="160" height="52" /&gt;
+  &lt;span class="brand__text"&gt;
+    &lt;span class="brand__title"&gt;Your Company&lt;/span&gt;
+    &lt;span class="brand__subtitle"&gt;Home Services&lt;/span&gt;
+  &lt;/span&gt;
+&lt;/a&gt;</code></pre>
+
+          <div class="note">
+            If you want to use a custom logo image, upload it to your project folder, for example:
+            <strong>assets/logo.png</strong> or <strong>images/logo.png</strong>, then update the
+            <code>src</code> path above.
+          </div>
+
+          <p>Also check the footer brand section in the same file, because the logo often appears there too.</p>
+
+          <pre><code>&lt;!-- Example: change brand text --&gt;
+&lt;span class="brand__title"&gt;HandyPro&lt;/span&gt;
+&lt;span class="brand__subtitle"&gt;Home Services&lt;/span&gt;</code></pre>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="card">
+          <h2>2) Edit the theme colors in CSS</h2>
+
+          <p>
+            The color palette is controlled from the root variables in <strong>style.css</strong>.
+            Open the file and update the values in the <code>:root</code> block.
+          </p>
+
+          <pre><code>/* style.css */
+:root {
+  --color-primary: #f75d1c;
+  --color-primary-dark: #d94a10;
+  --color-secondary: #0c1e35;
+  --color-secondary-strong: #102a46;
+  --color-surface: #f5f7fb;
+  --color-white: #ffffff;
+  --color-text: #243244;
+  --color-text-muted: #5e6d80;
+}</code></pre>
+
+          <div class="grid">
+            <div class="mini">
+              <strong>Primary accent</strong>
+              Change <code>--color-primary</code> for buttons, highlights, icons, and hover states.
+            </div>
+            <div class="mini">
+              <strong>Dark brand color</strong>
+              Change <code>--color-secondary</code> for main headings, header backgrounds, and text blocks.
+            </div>
+            <div class="mini">
+              <strong>Backgrounds</strong>
+              Update <code>--color-surface</code> and <code>--color-white</code> for card and page tone.
+            </div>
+          </div>
+
+          <div class="note">
+            Example: to change the main orange accent to blue:
+            <br />
+            Replace <code>#f75d1c</code> with your preferred color, such as <code>#1d4ed8</code>.
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="card">
+          <h2>3) Update the contact phone numbers</h2>
+
+          <p>
+            Phone numbers are hardcoded in multiple places in <strong>index.html</strong>. Replace each
+            instance with your business number.
+          </p>
+
+          <pre><code>&lt;!-- Header contact number --&gt;
+&lt;span class="header__call-number"&gt;+1 (800) 123-4567&lt;/span&gt;
+
+&lt;!-- CTA button tel link --&gt;
+&lt;a href="tel:+18001234567" class="btn btn--primary"&gt;Book a Free Estimate&lt;/a&gt;
+
+&lt;!-- Footer contact item --&gt;
+&lt;span&gt;+1 (800) 123-4567&lt;/span&gt;</code></pre>
+
+          <p>Search the file for the old number and replace it with your actual business contact:</p>
+
+          <pre><code>+1 (800) 123-4567
+tel:+18001234567</code></pre>
+
+          <div class="note">
+            Use the same number in both visible text and the <code>tel:</code> link so the phone link
+            works correctly on mobile devices.
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="card">
+          <h2>Quick checklist</h2>
+          <ul>
+            <li>Replace the logo in the header and footer.</li>
+            <li>Update company name and subtitle text in <strong>index.html</strong>.</li>
+            <li>Modify the CSS variables in <strong>style.css</strong> to match your brand colors.</li>
+            <li>Replace every phone number and <code>tel:</code> link with your real business contact details.</li>
+            <li>Test the website in a browser after edits.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
